@@ -19,6 +19,7 @@
 
 <script>
   export default {
-    name: 'Footer'
+    name: 'Footer',
+    props: ['todos', 'filter']
   };
 </script>
