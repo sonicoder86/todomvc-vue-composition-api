@@ -1,25 +1,49 @@
 <template>
-    <footer class="footer">
-        <span class="todo-count"><strong>2</strong><span> items left</span></span>
-        <ul class="filters">
-            <li>
-                <a href="#" class="selected">
-                  All
-                </a>
-                <a href="#" class="">
-                  Active
-                </a><a href="#" class="">
-                  Completed
+  <footer class="footer">
+    <span class="todo-count"><strong>{{ itemsLeft }}</strong><span> {{ itemText }} left</span></span>
+      <ul class="filters">
+            <li v-for="filterKey in Object.keys(filterTitles)" :key="filterKey">
+                <a
+                  href="#"
+                  :class="{ selected: filterKey === filter }"
+                  @click="onFilterSelect(filterKey)"
+                >
+                  {{ filterTitles[filterKey] }}
                 </a>
             </li>
-        </ul>
-        <button class="clear-completed">Clear completed</button>
+      </ul>
+      <button v-if="!!completedCount" class="clear-completed" @click="onClearCompleted">Clear completed</button>
     </footer>
 </template>
 
 <script>
+  import { mapActions, mapState } from 'vuex';
+  import { selectCompleted, selectNotCompleted } from '../selectors/Todo';
+  import { FILTERS } from '../constants/Filters';
+
   export default {
     name: 'Footer',
-    props: ['todos', 'filter']
+    methods: {
+      ...mapActions(['onClearCompleted', 'onFilterSelect'])
+    },
+    computed: {
+      ...mapState(['todos', 'filter']),
+      itemsLeft() {
+        return selectNotCompleted(this.todos).length;
+      },
+      completedCount() {
+        return selectCompleted(this.todos).length;
+      },
+      itemText() {
+        return this.itemsLeft === 1 ? 'item' : 'items';
+      },
+      filterTitles() {
+        return {
+          [FILTERS.all]: 'All',
+          [FILTERS.active]: 'Active',
+          [FILTERS.completed]: 'Completed'
+        };
+      }
+    }
   };
 </script>

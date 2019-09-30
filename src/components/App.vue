@@ -34,6 +34,9 @@
     },
     mounted() {
       this.onLoad(TodoLocal.loadTodos());
+    },
+    beforeUpdate() {
+      TodoLocal.storeTodos(this.todos);
     }
   }
 </script>
