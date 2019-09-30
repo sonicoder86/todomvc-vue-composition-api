@@ -9,5 +9,5 @@ Vue.use(Vuex);
 
 new Vue({
   store: storeFactory(),
-  render: h => h(App),
+  render: h => h(App)
 }).$mount('#app');
