@@ -10,19 +10,15 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex';
+  import { mapState, mapActions, mapGetters } from 'vuex';
   import Item from './Item.vue';
 
   export default {
     name: 'List',
-    components: {
-      Item
-    },
-    props: ['todos'],
+    components: { Item },
     computed: {
-      areAllCompleted() {
-        return this.todos.length && this.todos.every(todo => todo.completed);
-      }
+      ...mapState(['todos']),
+      ...mapGetters(['areAllCompleted'])
     },
     methods: {
       ...mapActions(['onRemove', 'onUpdate', 'onCompleteAll'])

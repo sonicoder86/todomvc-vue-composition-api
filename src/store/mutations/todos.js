@@ -1,6 +1,6 @@
-import { ACTION_TYPES } from '../constants/ActionTypes';
+import { ACTION_TYPES } from '../../constants/ActionTypes';
 import uuid from 'uuid/v4';
-import { selectCompleted, selectNotCompleted } from '../selectors/Todo';
+import { selectCompleted, selectNotCompleted } from '../helpers/Todo';
 
 export const todosReducer = {
   [ACTION_TYPES.load]: (state, { todos }) =>

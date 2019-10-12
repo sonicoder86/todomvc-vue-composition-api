@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import App from './components/App.vue';
 import 'todomvc-app-css/index.css';
-import { storeFactory } from './store';
+import { storeFactory } from './store/factory';
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);

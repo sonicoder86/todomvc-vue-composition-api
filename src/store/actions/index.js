@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from '../constants/ActionTypes';
+import { ACTION_TYPES } from '../../constants/ActionTypes';
 
 export const actions = {
   onLoad: ({ commit }, todos) => commit(ACTION_TYPES.load, { todos }),
