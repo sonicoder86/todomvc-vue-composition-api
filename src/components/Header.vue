@@ -21,7 +21,7 @@
     data: function() {
       return {
         name: ''
-      }
+      };
     },
     methods: {
       handleChange(event) {
