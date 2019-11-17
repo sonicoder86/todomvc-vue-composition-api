@@ -1,7 +1,9 @@
 import Vuex from 'vuex';
-import { state } from './state';
 import { actions } from './actions';
 import { mutations } from './mutations';
 import { getters } from './getters';
+import { FILTERS } from '../constants/Filters';
 
-export const storeFactory = () => new Vuex.Store({ state, actions, mutations, getters });
+const defaultState = { todos: [], filter: FILTERS.all };
+
+export const storeFactory = (state = defaultState) => new Vuex.Store({ state, actions, mutations, getters });
