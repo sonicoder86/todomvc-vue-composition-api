@@ -1,6 +1,6 @@
-import CopyRightComponent from './CopyRight.vue';
-import { shallowMount } from '@vue/test-utils';
 import { expect } from 'chai';
+import { shallowMount } from '@vue/test-utils';
+import CopyRightComponent from './CopyRight.vue';
 
 describe('CopyRight', function() {
   it('should contain creator and instruction', function() {
