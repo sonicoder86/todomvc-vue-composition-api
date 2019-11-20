@@ -5,8 +5,8 @@ import { storeFactory } from './factory';
 
 describe('storeFactory', function() {
   it('should create a new instance of vuex store', function() {
-    const vue = createLocalVue();
-    vue.use(Vuex);
+    const localVue = createLocalVue();
+    localVue.use(Vuex);
     const store = storeFactory();
 
     expect(store.state.todos).to.eql([]);

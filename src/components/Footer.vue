@@ -3,13 +3,9 @@
     <span class="todo-count"><strong>{{ itemsLeft }}</strong><span> {{ itemText }} left</span></span>
     <ul class="filters">
       <li v-for="filterKey in Object.keys(filterTitles)" :key="filterKey">
-        <a
-          href="#"
-          :class="{ selected: filterKey === filter }"
-          @click="onFilterSelect(filterKey)"
-        >
+        <router-link :class="{ selected: filterKey === filter }" :to="`/${filterKey}`" >
           {{ filterTitles[filterKey] }}
-        </a>
+        </router-link>
       </li>
     </ul>
     <button v-if="!!completedCount" class="clear-completed" @click="onClearCompleted">Clear completed</button>
@@ -23,7 +19,7 @@
   export default {
     name: 'Footer',
     methods: {
-      ...mapActions(['onClearCompleted', 'onFilterSelect'])
+      ...mapActions(['onClearCompleted']),
     },
     computed: {
       ...mapState(['todos', 'filter']),
