@@ -1,9 +1,9 @@
 export const ACTION_TYPES = {
-  load: 'LOAD',
-  create: 'CREATE',
-  remove: 'REMOVE',
-  update: 'UPDATE',
-  completeAll: 'COMPLETE_ALL',
-  clearCompleted: 'CLEAR_COMPLETED',
-  selectFilter: 'SELECT_FILTER',
+  load: 'load',
+  create: 'create',
+  remove: 'remove',
+  update: 'update',
+  completeAll: 'complete_all',
+  clearCompleted: 'clear_completed',
+  selectFilter: 'select_filter',
 };

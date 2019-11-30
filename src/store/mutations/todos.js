@@ -2,7 +2,7 @@ import { ACTION_TYPES } from '../../constants/ActionTypes';
 import uuid from 'uuid/v4';
 import { selectCompleted, selectNotCompleted } from '../helpers/Todo';
 
-export const todosReducer = {
+export const todosMutations = {
   [ACTION_TYPES.load]: (state, { todos }) =>
     state.todos = todos,
   [ACTION_TYPES.create]: (state, { name }) =>

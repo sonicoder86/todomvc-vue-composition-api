@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import Vuex from 'vuex';
-import Header from './Header.vue';
-import { storeFactory } from '../store/factory';
+import Header from '@/components/Header.vue';
+import { storeFactory } from '@/store/factory';
 
 describe('Header', function() {
   it('should add new element to store', function() {

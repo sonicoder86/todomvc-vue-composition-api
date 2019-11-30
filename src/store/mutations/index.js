@@ -1,7 +1,7 @@
-import { todosReducer } from './todos';
-import { filterReducer } from './filter';
+import { todosMutations } from './todos';
+import { filterMutations } from './filter';
 
 export const mutations = {
-  ...todosReducer,
-  ...filterReducer
+  ...todosMutations,
+  ...filterMutations
 };
