@@ -5,9 +5,3 @@
     <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
   </footer>
 </template>
-
-<script>
-  export default {
-    name: 'CopyRight'
-  };
-</script>
