@@ -4,6 +4,5 @@ import { mutations } from './mutations';
 import { getters } from './getters';
 import { FILTERS } from '../constants/Filters';
 
-const defaultState = { todos: [], filter: FILTERS.all };
-
-export const storeFactory = (state = defaultState) => new Vuex.Store({ state, actions, mutations, getters });
+export const storeFactory =
+  (state = { todos: [], filter: FILTERS.all }) => new Vuex.Store({ state, actions, mutations, getters });
