@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  client:
+    image: node:12
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - 8900
+    command: sh -c "npm install && npm start"
