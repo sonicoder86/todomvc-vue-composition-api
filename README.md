@@ -1,29 +1,21 @@
-# todoapp-vue
+# TodoApp built with Vue and Vuex
 
-## Project setup
-```
-npm install
-```
+The well-known TodoApp built with Vue and Vuex in a well-structured way.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+[Edit and try it out online](https://codesandbox.io/s/github/blacksonic/todoapp-vue)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Concepts and tools covered
 
-### Run your tests
-```
-npm run test
-```
+- [Vue CLI](https://cli.vuejs.org/)
+- [Components and Props](https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props)
+- [Handling Events](https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events)
+- [Vuex](https://vuex.vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
+- [Unit Testing](https://vue-test-utils.vuejs.org/)
+- [E2E Testing](https://www.cypress.io/)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Component architecture
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Architecture](./images/architecture.png)
+
+Application is compatible with [Vue devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
