@@ -10,7 +10,6 @@ The well-known TodoApp built with Vue and Vuex in a well-structured way.
 - [Components and Props](https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props)
 - [Handling Events](https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events)
 - [Vuex](https://vuex.vuejs.org/)
-- [Vue Router](https://router.vuejs.org/)
 - [Unit Testing](https://vue-test-utils.vuejs.org/)
 - [E2E Testing](https://www.cypress.io/)
 

@@ -2,8 +2,8 @@
   <div id="app">
     <section class="todoapp">
       <Header />
-      <List />
-      <Footer />
+      <List v-if="todos.length" />
+      <Footer v-if="todos.length" />
     </section>
     <CopyRight />
   </div>
@@ -18,7 +18,6 @@
   import { TodoLocal } from '../services/TodoLocal';
 
   export default {
-    name: 'app',
     components: { CopyRight, Header, List, Footer },
     computed: {
       ...mapState(['todos'])
