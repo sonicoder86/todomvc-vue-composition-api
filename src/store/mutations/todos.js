@@ -7,9 +7,9 @@ export const todosMutations = {
     state.todos = todos,
   [ACTION_TYPES.create]: (state, { name }) =>
     state.todos = [...state.todos, { id: uuid(), name, completed: false }],
-  [ACTION_TYPES.update]: (state, { id, values }) =>
+  [ACTION_TYPES.update]: (state, values) =>
     state.todos = state.todos.map(
-      todo => todo.id === id ? { ...todo, ...values } : todo
+      todo => todo.id === values.id ? { ...todo, ...values } : todo
     ),
   [ACTION_TYPES.remove]: (state, { id }) =>
     state.todos = state.todos.filter(todo => todo.id !== id),

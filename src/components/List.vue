@@ -14,7 +14,6 @@
   import Item from './Item.vue';
 
   export default {
-    name: 'List',
     components: { Item },
     computed: {
       ...mapGetters(['areAllCompleted', 'visibleTodos'])

@@ -1,18 +1,25 @@
 <template>
   <div id="app">
-    <router-view />
+    <section class="todoapp">
+      <Header />
+      <List />
+      <Footer />
+    </section>
     <CopyRight />
   </div>
 </template>
 
 <script>
   import { mapActions, mapState } from 'vuex';
+  import Header from './Header.vue';
+  import List from './List.vue';
+  import Footer from './Footer.vue';
   import CopyRight from './CopyRight.vue';
   import { TodoLocal } from '../services/TodoLocal';
 
   export default {
     name: 'app',
-    components: { CopyRight },
+    components: { CopyRight, Header, List, Footer },
     computed: {
       ...mapState(['todos'])
     },

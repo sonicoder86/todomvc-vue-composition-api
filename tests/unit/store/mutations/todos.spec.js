@@ -27,7 +27,7 @@ describe('todosMutations', function() {
   it('should update existing todo', function() {
     const state = { todos: [{ id: 'e2bb892a', name: 'Demo', completed: false }] };
 
-    todosMutations.update(state, { id: 'e2bb892a', values: { name: 'Demo2' } });
+    todosMutations.update(state, { id: 'e2bb892a', name: 'Demo2' });
 
     expect(state.todos[0].name).to.eql('Demo2');
   });
