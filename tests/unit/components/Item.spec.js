@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
 import Item from '@/components/Item.vue';
 
-describe('Item', function() {
-  it('should display todo item', function() {
+describe('Item', () => {
+  it('should display todo item', () => {
     const wrapper = shallowMount(Item, {
       propsData: {
         todo: { id: 'e2bb892a-844a-47fb-a2b3-47f491af9d88', name: 'Demo', completed: false }
@@ -13,7 +13,7 @@ describe('Item', function() {
     expect(wrapper.find('label').text()).to.eql('Demo');
   });
 
-  it('should mark todo item as completed', function() {
+  it('should mark todo item as completed', () => {
     const wrapper = shallowMount(Item, {
       propsData: {
         todo: { id: 'e2bb892a-844a-47fb-a2b3-47f491af9d88', name: 'Demo', completed: true }
@@ -23,7 +23,7 @@ describe('Item', function() {
     expect(wrapper.find('li').classes()).to.contain('completed');
   });
 
-  it('should notify about delete button', function() {
+  it('should notify about remove button', () => {
     const wrapper = shallowMount(Item, {
       propsData: {
         todo: { id: 'e2bb892a-844a-47fb-a2b3-47f491af9d88', name: 'Demo', completed: false }

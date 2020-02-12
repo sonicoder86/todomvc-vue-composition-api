@@ -4,16 +4,18 @@ import Vuex from 'vuex';
 import Header from '@/components/Header.vue';
 import { storeFactory } from '@/store/factory';
 
-describe('Header', function() {
-  it('should add new element to store', function() {
+describe('Header', () => {
+  it('should add new element to store', () => {
     const localVue = createLocalVue();
     localVue.use(Vuex);
     const store = storeFactory();
 
     const wrapper = shallowMount(Header, { localVue, store });
 
-    wrapper.vm.name = 'New';
-    wrapper.find('input').trigger('keyup.enter');
+    const input = wrapper.find('input');
+    input.element.value = 'New';
+    input.trigger('input');
+    input.trigger('keyup.enter');
 
     expect(store.state.todos).to.eql([]);
   });

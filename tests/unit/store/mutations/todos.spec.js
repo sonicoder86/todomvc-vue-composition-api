@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { todosMutations } from '@/store/mutations/todos';
 
-describe('todosMutations', function() {
-  it('should set list of items on load', function() {
+describe('todosMutations', () => {
+  it('should set list of items on load', () => {
     const state = { todos: [] };
     const todos = [{ id: 'e2bb892a', name: 'Demo', completed: false }];
 
@@ -13,7 +13,7 @@ describe('todosMutations', function() {
     expect(state.todos).to.contain(todos[0]);
   });
 
-  it('should create new todo', function() {
+  it('should create new todo', () => {
     const state = { todos: [] };
 
     todosMutations.create(state, { name: 'Demo' });
@@ -24,7 +24,7 @@ describe('todosMutations', function() {
     expect(state.todos[0].completed).to.eql(false);
   });
 
-  it('should update existing todo', function() {
+  it('should update existing todo', () => {
     const state = { todos: [{ id: 'e2bb892a', name: 'Demo', completed: false }] };
 
     todosMutations.update(state, { id: 'e2bb892a', name: 'Demo2' });
@@ -32,7 +32,7 @@ describe('todosMutations', function() {
     expect(state.todos[0].name).to.eql('Demo2');
   });
 
-  it('should remove existing todo', function() {
+  it('should remove existing todo', () => {
     const state = { todos: [{ id: 'e2bb892a', name: 'Demo', completed: false }] };
 
     todosMutations.remove(state, { id: 'e2bb892a' });
