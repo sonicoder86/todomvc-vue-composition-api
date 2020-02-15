@@ -1,6 +1,6 @@
 <script>
   import { mapActions } from 'vuex';
-  const ENTER_KEY = 13;
+  const ENTER_KEY = 'Enter';
 
   export default {
     data: () => ({
@@ -11,7 +11,7 @@
         this.name = event.target.value;
       },
       handleSubmit(event) {
-        if (event.which !== ENTER_KEY) {
+        if (event.key !== ENTER_KEY) {
           return;
         }
 

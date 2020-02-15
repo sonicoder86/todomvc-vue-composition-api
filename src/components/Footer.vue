@@ -13,11 +13,11 @@
         return this.itemsLeft === 1 ? 'item' : 'items';
       },
       filterTitles() {
-        return {
-          [FILTERS.all]: 'All',
-          [FILTERS.active]: 'Active',
-          [FILTERS.completed]: 'Completed'
-        };
+        return [
+          { key: FILTERS.all, value: 'All' },
+          { key: FILTERS.active, value: 'Active' },
+          { key: FILTERS.completed, value: 'Completed' }
+        ];
       }
     }
   };
@@ -26,13 +26,13 @@
   <footer class="footer">
     <span class="todo-count"><strong>{{ itemsLeft }}</strong><span> {{ itemText }} left</span></span>
     <ul class="filters">
-      <li v-for="filterKey in Object.keys(filterTitles)" :key="filterKey">
+      <li v-for="filterTitle in filterTitles" :key="filterTitle.key">
         <a
           href="#"
-          :class="{ selected: filterKey === filter }"
-          @click="onFilterSelect(filterKey)"
+          :class="{ selected: filterTitle.key === filter }"
+          @click="onFilterSelect(filterTitle.key)"
         >
-          {{ filterTitles[filterKey] }}
+          {{ filterTitle.value }}
         </a>
       </li>
     </ul>
