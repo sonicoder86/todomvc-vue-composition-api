@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
-import { storeFactory } from '@/store/factory';
+import { storeFactory } from './factory';
 
 describe('storeFactory', () => {
   it('should create a new instance of store', () => {

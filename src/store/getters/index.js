@@ -1,4 +1,4 @@
-import { selectNotCompleted, selectVisible, selectCompleted } from '../helpers/Todo';
+import { selectNotCompleted, selectVisible, selectCompleted } from './selectors';
 
 export const getters = {
   visibleTodos: state => selectVisible(state.todos, state.filter),

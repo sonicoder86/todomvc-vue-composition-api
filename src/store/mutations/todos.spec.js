@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { todosMutations } from '@/store/mutations/todos';
+import { todosMutations } from './todos';
 
 describe('todosMutations', () => {
   it('should set list of items on load', () => {

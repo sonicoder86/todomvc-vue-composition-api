@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import Item from '@/components/Item.vue';
+import Item from './Item.vue';
 
 describe('Item', () => {
   it('should display todo item', () => {
