@@ -1,14 +1,14 @@
 import { expect } from 'chai';
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import Vuex from 'vuex';
-import Header from './Header.vue';
-import { storeFactory } from '../store/factory';
+import Header from './header.vue';
+import { createStore } from '../../store/index';
 
 describe('Header', () => {
   it('should add new element to store', () => {
     const localVue = createLocalVue();
     localVue.use(Vuex);
-    const store = storeFactory();
+    const store = createStore();
 
     const wrapper = shallowMount(Header, { localVue, store });
 

@@ -1,6 +1,6 @@
-import { ACTION_TYPES } from '../../constants/ActionTypes';
+import { ACTION_TYPES } from '../../constants/action-types';
 import uuid from 'uuid/v4';
-import { selectCompleted, selectNotCompleted } from '../getters/selectors';
+import { selectCompleted, selectNotCompleted } from '../getters/todo';
 
 export const todosMutations = {
   [ACTION_TYPES.load]: (state, { todos }) =>

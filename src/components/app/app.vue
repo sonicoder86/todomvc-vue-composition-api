@@ -11,11 +11,11 @@
 
 <script>
   import { mapActions, mapState } from 'vuex';
-  import Header from './Header.vue';
-  import List from './List.vue';
-  import Footer from './Footer.vue';
-  import CopyRight from './CopyRight.vue';
-  import { TodoLocal } from '../services/TodoLocal';
+  import Header from '../header/header.vue';
+  import List from '../list/list.vue';
+  import Footer from '../footer/footer.vue';
+  import CopyRight from '../copy-right/copy-right.vue';
+  import { TodoLocal } from '../../services/todo-local';
 
   export default {
     components: { CopyRight, Header, List, Footer },

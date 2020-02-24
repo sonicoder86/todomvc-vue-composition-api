@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from '../../constants/ActionTypes';
+import { ACTION_TYPES } from '../../constants/action-types';
 
 export const filterMutations = {
   [ACTION_TYPES.selectFilter]: (state, { filter }) =>

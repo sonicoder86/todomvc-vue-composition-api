@@ -1,6 +1,6 @@
 <script>
   import { mapActions, mapState, mapGetters } from 'vuex';
-  import { FILTERS } from '../constants/Filters';
+  import { FILTERS } from '../../constants/filter';
 
   export default {
     methods: {

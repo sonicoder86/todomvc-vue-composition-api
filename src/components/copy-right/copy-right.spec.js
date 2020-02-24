@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import CopyRightComponent from './CopyRight.vue';
+import CopyRightComponent from './copy-right.vue';
 
 describe('CopyRight', () => {
   it('should render component', () => {

@@ -1,6 +1,6 @@
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import Item from './Item.vue';
+  import Item from '../item/item.vue';
 
   export default {
     components: { Item },
