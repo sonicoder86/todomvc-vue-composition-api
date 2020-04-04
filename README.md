@@ -1,6 +1,10 @@
-# TodoApp built with Vue and Vuex
+# TodoMVC built with Vue and Vuex
 
-The well-known TodoApp built with Vue and Vuex in a well-structured way.
+[![Build Status](https://travis-ci.com/blacksonic/todomvc-vue.svg?branch=master)](https://travis-ci.com/blacksonic/todomvc-vue)
+
+The well-known TodoMVC built with Vue and Vuex in a structured and testable way.
+
+![TodoMVC Vue](./images/screenshot.png "TodoMVC Vue")
 
 [Edit and try it out online](https://codesandbox.io/s/github/blacksonic/todoapp-vue)
 
