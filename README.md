@@ -1,6 +1,6 @@
 # TodoMVC built with Vue and Vuex
 
-[![Build Status](https://travis-ci.com/blacksonic/todomvc-vue.svg?branch=master)](https://travis-ci.com/blacksonic/todomvc-vue)
+[![Build Status](https://travis-ci.com/blacksonic/todomvc-vue-composition-api.svg?branch=master)](https://travis-ci.com/blacksonic/todomvc-vue-composition-api)
 
 The well-known TodoMVC built with Vue and Vuex in a structured and testable way.
 

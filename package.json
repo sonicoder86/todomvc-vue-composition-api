@@ -1,9 +1,9 @@
 {
-  "name": "todomvc-vue",
+  "name": "todomvc-vue-composition-api",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blacksonic/todomvc-vue.git"
+    "url": "git+https://github.com/blacksonic/todomvc-vue-composition-api.git"
   },
   "scripts": {
     "start": "npm run serve",
