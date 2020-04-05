@@ -18,6 +18,9 @@
   import { TodoLocal } from '../../services/todo-local';
 
   export default {
+    setup(props, context) {
+      console.log(context.attrs, context.attrs.appContext);
+    },
     components: { CopyRight, Header, List, Footer },
     computed: {
       ...mapState(['todos'])

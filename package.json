@@ -10,7 +10,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "npm run test:unit",
+    "test": "npm run test:e2e",
     "test:unit": "vue-cli-service test:unit --recursive 'src/**/*.spec.js'",
     "test:e2e": "vue-cli-service test:e2e --headless"
   },

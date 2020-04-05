@@ -1,4 +1,6 @@
 <script>
+  import { reactive, toRefs } from 'vue';
+
   export default {
     props: {
       todo: {
@@ -6,30 +8,29 @@
         required: true
       }
     },
-    data: () => ({
-      editing: false,
-      name: ''
-    }),
-    methods: {
-      handleEdit() {
-        this.editing = true;
-      },
-      handleCompleted() {
-        this.$emit('update', { id: this.todo.id, completed: !this.todo.completed });
-      },
-      handleRemove() {
-        this.$emit('remove', this.todo.id);
-      },
-      handleChange(event) {
-        this.name = event.target.value;
-      },
-      handleBlur() {
-        this.$emit('update', { id: this.todo.id, name: this.name });
-        this.editing = false;
-      }
-    },
-    mounted() {
-      this.name = this.todo.name;
+    setup(props, { emit }) {
+      const state = reactive({
+        editing: false,
+        name: props.todo.name
+      });
+
+      const handleRemove = () => emit('remove', props.todo.id);
+      const handleCompleted = () => emit('update', { id: props.todo.id, completed: !props.todo.completed });
+      const handleEdit = () => state.editing = true;
+      const handleChange = event => state.name = event.target.value;
+      const handleBlur = () => {
+        emit('update', { id: props.todo.id, name: state.name });
+        state.editing = false;
+      };
+
+      return {
+        handleRemove,
+        handleCompleted,
+        handleEdit,
+        handleChange,
+        handleBlur,
+        ...toRefs(state)
+      };
     }
   };
 </script>
