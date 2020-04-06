@@ -10,7 +10,7 @@
       ...mapState(['todos', 'filter']),
       ...mapGetters(['itemsLeft', 'completedCount']),
       itemText() {
-        return this.itemsLeft === 1 ? 'item' : 'items';
+        return this.itemsLeft === 1 ? ' item' : ' items';
       },
       filterTitles() {
         return [

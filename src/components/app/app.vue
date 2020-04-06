@@ -2,15 +2,16 @@
   <div id="app">
     <section class="todoapp">
       <Header />
-      <List v-if="todos.length" />
-      <Footer v-if="todos.length" />
+      <List v-if="todosLength" />
+      <Footer v-if="todosLength" />
     </section>
     <CopyRight />
   </div>
 </template>
 
 <script>
-  import { mapActions, mapState } from 'vuex';
+  import { useStore } from 'vuex';
+  import { onMounted, watchEffect, computed } from 'vue';
   import Header from '../header/header.vue';
   import List from '../list/list.vue';
   import Footer from '../footer/footer.vue';
@@ -18,24 +19,21 @@
   import { TodoLocal } from '../../services/todo-local';
 
   export default {
-    // setup(props, context) {
-    //   console.log(context.attrs, context.attrs.appContext);
-    //   console.log(context.appContext);
-    // },
     components: { CopyRight, Header, List, Footer },
-    computed: {
-      ...mapState(['todos'])
-    },
-    methods: {
-      ...mapActions(['onLoad'])
-    },
-    mounted() {
-      this.onLoad(TodoLocal.loadTodos());
-    },
-    watch: {
-      todos() {
-        TodoLocal.storeTodos(this.todos);
-      },
+    setup() {
+      const store = useStore();
+
+      onMounted(() => {
+        store.dispatch('onLoad', TodoLocal.loadTodos());
+
+        watchEffect(() => {
+          TodoLocal.storeTodos(store.state.todos);
+        });
+      });
+
+      return {
+        todosLength: computed(() => store.state.todos.length)
+      };
     }
   }
 </script>
