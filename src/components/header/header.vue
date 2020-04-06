@@ -1,24 +1,30 @@
 <script>
-  import { mapActions } from 'vuex';
+  import { reactive, toRefs } from 'vue';
+  import { useStore } from 'vuex';
   const ENTER_KEY = 'Enter';
 
   export default {
-    data: () => ({
-      name: ''
-    }),
-    methods: {
-      handleChange(event) {
-        this.name = event.target.value;
-      },
-      handleSubmit(event) {
+    setup() {
+      const store = useStore();
+      const state = reactive({
+        name: ''
+      });
+
+      const handleChange = event => state.name = event.target.value;
+      const handleSubmit = event => {
         if (event.key !== ENTER_KEY) {
           return;
         }
 
-        this.onCreate(this.name);
-        this.name = '';
-      },
-      ...mapActions(['onCreate'])
+        store.dispatch('onCreate', state.name);
+        state.name = '';
+      };
+
+      return {
+        handleChange,
+        handleSubmit,
+        ...toRefs(state)
+      };
     }
   };
 </script>
