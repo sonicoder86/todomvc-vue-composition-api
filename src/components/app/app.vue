@@ -20,6 +20,7 @@
   export default {
     // setup(props, context) {
     //   console.log(context.attrs, context.attrs.appContext);
+    //   console.log(context.appContext);
     // },
     components: { CopyRight, Header, List, Footer },
     computed: {
