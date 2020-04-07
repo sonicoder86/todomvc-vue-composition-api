@@ -1,14 +1,24 @@
 <script>
-  import { mapActions, mapGetters } from 'vuex';
+  import { computed } from 'vue';
+  import { useStore } from 'vuex';
   import Item from '../item/item.vue';
 
   export default {
     components: { Item },
-    computed: {
-      ...mapGetters(['areAllCompleted', 'visibleTodos'])
-    },
-    methods: {
-      ...mapActions(['onRemove', 'onUpdate', 'onCompleteAll'])
+    setup() {
+      const store = useStore();
+
+      const onRemove = todoId => store.dispatch('onRemove', todoId);
+      const onUpdate = todo => store.dispatch('onUpdate', todo);
+      const onCompleteAll = () => store.dispatch('onCompleteAll');
+
+      return {
+        visibleTodos: computed(() => store.getters.visibleTodos),
+        areAllCompleted: computed(() => store.getters.areAllCompleted),
+        onRemove,
+        onUpdate,
+        onCompleteAll
+      };
     }
   };
 </script>
