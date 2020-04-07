@@ -1,24 +1,29 @@
 <script>
-  import { mapActions, mapState, mapGetters } from 'vuex';
+  import { computed } from 'vue';
+  import { useStore } from 'vuex';
   import { FILTERS } from '../../constants/filter';
 
   export default {
-    methods: {
-      ...mapActions(['onClearCompleted', 'onFilterSelect']),
-    },
-    computed: {
-      ...mapState(['todos', 'filter']),
-      ...mapGetters(['itemsLeft', 'completedCount']),
-      itemText() {
-        return this.itemsLeft === 1 ? ' item' : ' items';
-      },
-      filterTitles() {
-        return [
-          { key: FILTERS.all, value: 'All' },
-          { key: FILTERS.active, value: 'Active' },
-          { key: FILTERS.completed, value: 'Completed' }
-        ];
-      }
+    setup() {
+      const store = useStore();
+
+      const filterTitles = [
+        { key: FILTERS.all, value: 'All' },
+        { key: FILTERS.active, value: 'Active' },
+        { key: FILTERS.completed, value: 'Completed' }
+      ];
+      const onClearCompleted = () => store.dispatch('onClearCompleted');
+      const onFilterSelect = filter => store.dispatch('onFilterSelect', filter);
+
+      return {
+        filterTitles,
+        onClearCompleted,
+        onFilterSelect,
+        filter: computed(() => store.state.filter),
+        itemsLeft: computed(() => store.getters.itemsLeft),
+        completedCount: computed(() => store.getters.completedCount),
+        itemText: computed(() => store.getters.itemsLeft === 1 ? ' item' : ' items')
+      };
     }
   };
 </script>
