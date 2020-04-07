@@ -6,7 +6,7 @@ The well-known TodoMVC built with Vue Composition Api and Vuex in a structured a
 
 ![TodoMVC Vue](./images/screenshot.png "TodoMVC Vue")
 
-[Edit and try it out online](https://codesandbox.io/s/github/blacksonic/todoapp-vue-composition-api)
+[Edit and try it out online](https://codesandbox.io/s/github/blacksonic/todomvc-vue-composition-api)
 
 ## Concepts and tools covered
 
