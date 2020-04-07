@@ -21,9 +21,9 @@
       };
 
       return {
+        ...toRefs(state),
         handleChange,
-        handleSubmit,
-        ...toRefs(state)
+        handleSubmit
       };
     }
   };

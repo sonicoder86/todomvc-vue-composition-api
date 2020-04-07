@@ -17,12 +17,12 @@
 
       return {
         filterTitles,
-        onClearCompleted,
-        onFilterSelect,
         filter: computed(() => store.state.filter),
         itemsLeft: computed(() => store.getters.itemsLeft),
         completedCount: computed(() => store.getters.completedCount),
-        itemText: computed(() => store.getters.itemsLeft === 1 ? ' item' : ' items')
+        itemText: computed(() => store.getters.itemsLeft === 1 ? ' item' : ' items'),
+        onClearCompleted,
+        onFilterSelect
       };
     }
   };

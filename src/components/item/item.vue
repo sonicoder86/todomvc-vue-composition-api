@@ -24,12 +24,12 @@
       };
 
       return {
+        ...toRefs(state),
         handleRemove,
         handleCompleted,
         handleEdit,
         handleChange,
-        handleBlur,
-        ...toRefs(state)
+        handleBlur
       };
     }
   };
