@@ -11,8 +11,6 @@ The well-known TodoMVC built with Vue Composition Api and Vuex in a structured a
 ## Concepts and tools covered
 
 - [Vue CLI](https://cli.vuejs.org/)
-- [Components and Props](https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props)
-- [Handling Events](https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events)
 - [Composition Api](https://composition-api.vuejs.org/#summary)
 - [Vuex](https://vuex.vuejs.org/)
 - ~~Unit Testing~~ [Vue 3 is not supported yet](https://github.com/vuejs/vue-test-utils/issues/1496)
