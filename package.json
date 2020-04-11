@@ -22,7 +22,7 @@
     "vuex": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.3",
+    "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-plugin-e2e-cypress": "^4.2.3",
     "@vue/cli-plugin-eslint": "^4.2.3",
     "@vue/cli-plugin-unit-mocha": "^4.2.3",
