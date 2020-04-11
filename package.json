@@ -35,7 +35,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sinon": "^9.0.1",
     "sinon-chai": "^3.5.0",
-    "vue-cli-plugin-vue-next": "0.0.5",
+    "vue-cli-plugin-vue-next": "0.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "postcss": {
