@@ -22,12 +22,12 @@
     "vuex": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.3",
-    "@vue/cli-plugin-e2e-cypress": "^4.2.3",
-    "@vue/cli-plugin-eslint": "^4.2.3",
-    "@vue/cli-plugin-unit-mocha": "^4.2.3",
-    "@vue/cli-service": "^4.2.3",
-    "@vue/compiler-sfc": "^3.0.0-alpha.11",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-e2e-cypress": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-plugin-unit-mocha": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "@vue/compiler-sfc": "^3.0.0-alpha.12",
     "@vue/test-utils": "1.0.0-beta.32",
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
@@ -35,7 +35,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sinon": "^9.0.1",
     "sinon-chai": "^3.5.0",
-    "vue-cli-plugin-vue-next": "0.0.5",
+    "vue-cli-plugin-vue-next": "0.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "postcss": {
