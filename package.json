@@ -10,7 +10,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "npm run test:e2e",
+    "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "vue-cli-service test:unit --recursive 'src/**/*.spec.js'",
     "test:e2e": "vue-cli-service test:e2e --headless"
   },
@@ -18,7 +18,7 @@
     "core-js": "^3.6.4",
     "todomvc-app-css": "^2.3.0",
     "uuid": "^7.0.3",
-    "vue": "^3.0.0-alpha.11",
+    "vue": "^3.0.0-alpha.12",
     "vuex": "^4.0.0-alpha.1"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "@vue/cli-plugin-unit-mocha": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
     "@vue/compiler-sfc": "^3.0.0-alpha.12",
-    "@vue/test-utils": "1.0.0-beta.32",
+    "@vue/test-utils": "2.0.0-alpha.1",
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
