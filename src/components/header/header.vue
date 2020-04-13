@@ -1,6 +1,7 @@
 <script>
 import { reactive, toRefs } from 'vue';
 import { useStore } from 'vuex';
+
 const ENTER_KEY = 'Enter';
 
 export default {
