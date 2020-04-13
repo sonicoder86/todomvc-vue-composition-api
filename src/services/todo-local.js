@@ -2,9 +2,7 @@ const LOCAL_STORAGE_KEY = 'todoapp_todos';
 
 export class TodoLocal {
   static loadTodos() {
-    return JSON.parse(
-      window.localStorage.getItem(LOCAL_STORAGE_KEY) || '[]'
-    );
+    return JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY) || '[]');
   }
 
   static storeTodos(todos) {

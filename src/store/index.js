@@ -18,5 +18,5 @@ const actions = {
   ...filterActions
 };
 
-export const createStore =
-  (state = { todos: [], filter: FILTERS.all }) => new Vuex.Store({ state, actions, mutations, getters });
+export const createStore = (state = { todos: [], filter: FILTERS.all }) =>
+  new Vuex.Store({ state, actions, mutations, getters });

@@ -5,5 +5,5 @@ export const ACTION_TYPES = {
   update: 'update',
   completeAll: 'complete_all',
   clearCompleted: 'clear_completed',
-  selectFilter: 'select_filter',
+  selectFilter: 'select_filter'
 };
