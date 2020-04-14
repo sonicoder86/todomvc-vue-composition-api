@@ -6,7 +6,7 @@
     "url": "git+https://github.com/blacksonic/todomvc-vue-composition-api.git"
   },
   "scripts": {
-    "start": "npm run serve",
+    "start": "vue-cli-service serve",
     "format": "prettier --write 'src/**/*.{js,vue}'",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --no-fix",
