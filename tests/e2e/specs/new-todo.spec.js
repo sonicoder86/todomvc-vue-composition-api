@@ -3,9 +3,9 @@ describe('New todo', () => {
     cy.visit('/');
     cy.contains('h1', 'todos');
 
-    cy.get('.new-todo')
-      .type('Demo')
-      .type('{enter}');
+    const newTodo = cy.get('.new-todo');
+    newTodo.type('Demo');
+    newTodo.type('{enter}');
 
     cy.get('.main .todo-list .view').contains('Demo');
   });

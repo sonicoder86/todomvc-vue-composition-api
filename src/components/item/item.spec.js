@@ -23,7 +23,7 @@ describe('Item', () => {
     expect(wrapper.find('li').classes()).to.contain('completed');
   });
 
-  it.skip('should notify about remove button', () => {
+  it('should notify about remove button', () => {
     const wrapper = mount(Item, {
       props: {
         todo: { id: 'e2bb892a-844a-47fb-a2b3-47f491af9d88', name: 'Demo', completed: false }
