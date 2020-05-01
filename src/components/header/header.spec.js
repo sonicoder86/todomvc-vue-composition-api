@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils';
 import Header from './header.vue';
 import { createStore } from '../../store/index';
 
-describe.skip('Header', () => {
+describe('Header', () => {
   it('should add new element to store', () => {
     const store = createStore();
 
