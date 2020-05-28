@@ -1,4 +1,4 @@
-import Vuex from 'vuex';
+import { createStore as createVuexStore } from 'vuex';
 import { getters } from './getters/todo';
 import { FILTERS } from '../constants/filter';
 
@@ -19,4 +19,4 @@ const actions = {
 };
 
 export const createStore = (state = { todos: [], filter: FILTERS.all }) =>
-  new Vuex.Store({ state, actions, mutations, getters });
+  createVuexStore({ state, actions, mutations, getters });
