@@ -1,9 +1,9 @@
-# TodoMVC built with Vue Composition Api and Vuex
+# TodoMVC built with Vue 3 Composition Api and Vuex
 
 [![Build Status](https://travis-ci.com/blacksonic/todomvc-vue-composition-api.svg?branch=master)](https://travis-ci.com/blacksonic/todomvc-vue-composition-api)
 [![Dependencies Status](https://david-dm.org/blacksonic/todomvc-vue-composition-api/status.svg)](https://david-dm.org/blacksonic/todomvc-vue-composition-api)
 
-The well-known TodoMVC built with Vue Composition Api and Vuex in a structured and testable way.
+The well-known TodoMVC built with Vue 3 Composition Api and Vuex in a structured and testable way.
 
 ![TodoMVC Vue](./images/screenshot.png "TodoMVC Vue")
 
