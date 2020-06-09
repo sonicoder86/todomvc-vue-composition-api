@@ -35,7 +35,7 @@ export default {
     >
     <ul class="filters">
       <li v-for="filterTitle in filterTitles" :key="filterTitle.key">
-        <a href="#" :class="{ selected: filterTitle.key === filter }" @click="onFilterSelect(filterTitle.key)">
+        <a href="./#" :class="{ selected: filterTitle.key === filter }" @click="onFilterSelect(filterTitle.key)">
           {{ filterTitle.value }}
         </a>
       </li>
