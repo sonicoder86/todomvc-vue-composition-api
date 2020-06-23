@@ -2,15 +2,18 @@ module.exports = {
   publicPath: '',
   devServer: {
     port: 9000
+  },
+  chainWebpack: config => {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+        options.compilerOptions = {
+          ...(options.compilerOptions || {}),
+          isCustomElement: tag => /^x-/.test(tag)
+        };
+        return options;
+      });
   }
-  // ,
-  // chainWebpack: config => {
-  //   // get the existing vue-loader rule and tap into its options
-  //   config.module.rule('vue-loader').tap(options => {
-  //     options.compilerOptions = {
-  //       ...(options.compilerOptions || {}), // merge existing compilerOptions, if any
-  //       isCustomElement: tag => /^x-/.test(tag)
-  //     }
-  //   })
-  // }
 };
