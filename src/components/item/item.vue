@@ -1,5 +1,5 @@
 <script>
-import { reactive, toRefs } from 'vue';
+import { ref } from 'vue';
 
 export default {
   props: {
@@ -9,22 +9,21 @@ export default {
     }
   },
   setup(props, { emit }) {
-    const state = reactive({
-      editing: false,
-      name: props.todo.name
-    });
+    const editing = ref(false);
+    const name = ref(props.todo.name);
 
-    const handleRemove = () => emit('remove', props.todo.id);
+    const handleEdit = () => (editing.value = true);
     const handleCompleted = () => emit('update', { id: props.todo.id, completed: !props.todo.completed });
-    const handleEdit = () => (state.editing = true);
-    const handleChange = event => (state.name = event.target.value);
+    const handleRemove = () => emit('remove', props.todo.id);
+    const handleChange = event => (name.value = event.target.value);
     const handleBlur = () => {
-      emit('update', { id: props.todo.id, name: state.name });
-      state.editing = false;
+      emit('update', { id: props.todo.id, name: name.value });
+      editing.value = false;
     };
 
     return {
-      ...toRefs(state),
+      name,
+      editing,
       handleRemove,
       handleCompleted,
       handleEdit,
