@@ -13,6 +13,7 @@ module.exports = {
           ...(options.compilerOptions || {}),
           isCustomElement: tag => /^x-/.test(tag)
         };
+        options.isServerBuild = false;
         return options;
       });
   }
