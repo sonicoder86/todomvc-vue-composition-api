@@ -20,7 +20,7 @@
     "todomvc-app-css": "^2.3.0",
     "uuid": "^8.3.2",
     "vue": "^3.0.4",
-    "vuex": "^4.0.0-rc.2"
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.9",
