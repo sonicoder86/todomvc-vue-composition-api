@@ -17,7 +17,8 @@ module.exports = {
     'no-return-assign': 0,
     'no-param-reassign': 0,
     'implicit-arrow-linebreak': 0,
-    'import/prefer-default-export': 0
+    'import/prefer-default-export': 0,
+    'import/no-extraneous-dependencies': 0
   },
   parserOptions: {
     parser: 'babel-eslint'
