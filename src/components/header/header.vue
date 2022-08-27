@@ -1,43 +1,18 @@
-<script>
-import { reactive, toRefs } from 'vue';
+<script setup>
+import { ref } from 'vue';
 import { useStore } from 'vuex';
 
-const ENTER_KEY = 'Enter';
+const store = useStore();
+const name = ref('');
 
-export default {
-  setup() {
-    const store = useStore();
-    const state = reactive({
-      name: ''
-    });
-
-    const handleChange = event => (state.name = event.target.value);
-    const handleSubmit = event => {
-      if (event.key !== ENTER_KEY) {
-        return;
-      }
-
-      store.dispatch('onCreate', state.name);
-      state.name = '';
-    };
-
-    return {
-      ...toRefs(state),
-      handleChange,
-      handleSubmit
-    };
-  }
+const handleSubmit = () => {
+  store.dispatch('onCreate', name.value);
+  name.value = '';
 };
 </script>
 <template>
   <header class="header">
     <h1>todos</h1>
-    <input
-      class="new-todo"
-      placeholder="What needs to be done?"
-      :value="name"
-      @input="handleChange"
-      @keyup="handleSubmit"
-    />
+    <input class="new-todo" placeholder="What needs to be done?" v-model="name" @keyup.enter="handleSubmit" />
   </header>
 </template>
